@@ -1,6 +1,6 @@
 package com.raju.codekatas.fizzbuzz;
 
-public class FizzBuzz {
+public class FizzBuzzKata {
 
 
     public static String of(int number) {

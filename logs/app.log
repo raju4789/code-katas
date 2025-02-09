@@ -1,0 +1,141 @@
+2025-02-09 09:11:22,207 [ERROR] [main] c.r.c.b.c.AccountConcurrentImpl - Withdrawal failed: Insufficient funds. Requested: 200, Available: 100
+2025-02-09 09:11:22,246 [INFO] [pool-1-thread-2] c.r.c.b.c.AccountConcurrentImpl - Withdrawn 20: New Balance: 80
+2025-02-09 09:11:22,247 [INFO] [pool-1-thread-3] c.r.c.b.c.AccountConcurrentImpl - Withdrawn 20: New Balance: 60
+2025-02-09 09:11:22,247 [INFO] [pool-1-thread-4] c.r.c.b.c.AccountConcurrentImpl - Withdrawn 20: New Balance: 40
+2025-02-09 09:11:22,248 [INFO] [pool-1-thread-5] c.r.c.b.c.AccountConcurrentImpl - Withdrawn 20: New Balance: 20
+2025-02-09 09:11:22,248 [INFO] [pool-1-thread-1] c.r.c.b.c.AccountConcurrentImpl - Withdrawn 20: New Balance: 0
+2025-02-09 09:11:22,250 [INFO] [main] c.r.c.b.c.AccountConcurrentImpl - Account Balance Requested: 0
+2025-02-09 09:11:22,282 [INFO] [pool-2-thread-1] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 150
+2025-02-09 09:11:22,282 [INFO] [pool-2-thread-2] c.r.c.b.c.AccountConcurrentImpl - Withdrawn 30: New Balance: 120
+2025-02-09 09:11:22,282 [INFO] [pool-2-thread-3] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 170
+2025-02-09 09:11:22,283 [INFO] [pool-2-thread-4] c.r.c.b.c.AccountConcurrentImpl - Withdrawn 30: New Balance: 140
+2025-02-09 09:11:22,283 [INFO] [pool-2-thread-6] c.r.c.b.c.AccountConcurrentImpl - Withdrawn 30: New Balance: 110
+2025-02-09 09:11:22,283 [INFO] [pool-2-thread-5] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 160
+2025-02-09 09:11:22,286 [INFO] [pool-2-thread-7] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 210
+2025-02-09 09:11:22,286 [INFO] [pool-2-thread-8] c.r.c.b.c.AccountConcurrentImpl - Withdrawn 30: New Balance: 180
+2025-02-09 09:11:22,287 [INFO] [pool-2-thread-10] c.r.c.b.c.AccountConcurrentImpl - Withdrawn 30: New Balance: 150
+2025-02-09 09:11:22,287 [INFO] [pool-2-thread-9] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 200
+2025-02-09 09:11:22,287 [INFO] [main] c.r.c.b.c.AccountConcurrentImpl - Account Balance Requested: 200
+2025-02-09 09:11:22,298 [INFO] [main] c.r.c.b.c.AccountConcurrentImpl - Withdrawn 50: New Balance: 50
+2025-02-09 09:11:22,298 [INFO] [main] c.r.c.b.c.AccountConcurrentImpl - Account Balance Requested: 50
+2025-02-09 09:11:22,302 [INFO] [pool-3-thread-1] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 150
+2025-02-09 09:11:22,303 [INFO] [pool-3-thread-2] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 200
+2025-02-09 09:11:22,303 [INFO] [pool-3-thread-2] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 250
+2025-02-09 09:11:22,304 [INFO] [pool-3-thread-2] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 300
+2025-02-09 09:11:22,304 [INFO] [pool-3-thread-3] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 350
+2025-02-09 09:11:22,304 [INFO] [pool-3-thread-4] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 400
+2025-02-09 09:11:22,304 [INFO] [pool-3-thread-5] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 450
+2025-02-09 09:11:22,304 [INFO] [pool-3-thread-1] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 500
+2025-02-09 09:11:22,304 [INFO] [pool-3-thread-2] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 550
+2025-02-09 09:11:22,304 [INFO] [pool-3-thread-3] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 600
+2025-02-09 09:11:22,305 [INFO] [main] c.r.c.b.c.AccountConcurrentImpl - Account Balance Requested: 600
+2025-02-09 09:11:22,310 [INFO] [main] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 150
+2025-02-09 09:11:22,310 [INFO] [main] c.r.c.b.c.AccountConcurrentImpl - Account Balance Requested: 150
+2025-02-09 09:20:21,431 [INFO] [pool-1-thread-1] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 150
+2025-02-09 09:20:21,444 [INFO] [pool-1-thread-3] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 200
+2025-02-09 09:20:21,444 [INFO] [pool-1-thread-5] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 250
+2025-02-09 09:20:21,444 [INFO] [pool-1-thread-7] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 300
+2025-02-09 09:20:21,444 [INFO] [pool-1-thread-9] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 350
+2025-02-09 09:20:21,446 [INFO] [pool-1-thread-2] c.r.c.b.c.AccountConcurrentImpl - Withdrawn 200: New Balance: 150
+2025-02-09 09:20:21,446 [ERROR] [pool-1-thread-8] c.r.c.b.c.AccountConcurrentImpl - Withdrawal failed: Insufficient funds. Requested: 200, Available: 150
+2025-02-09 09:20:21,447 [ERROR] [pool-1-thread-4] c.r.c.b.c.AccountConcurrentImpl - Withdrawal failed: Insufficient funds. Requested: 200, Available: 150
+2025-02-09 09:20:21,447 [ERROR] [pool-1-thread-10] c.r.c.b.c.AccountConcurrentImpl - Withdrawal failed: Insufficient funds. Requested: 200, Available: 150
+2025-02-09 09:20:21,447 [ERROR] [pool-1-thread-6] c.r.c.b.c.AccountConcurrentImpl - Withdrawal failed: Insufficient funds. Requested: 200, Available: 150
+2025-02-09 09:21:24,085 [INFO] [pool-1-thread-1] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 150
+2025-02-09 09:21:24,098 [INFO] [pool-1-thread-3] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 200
+2025-02-09 09:21:24,099 [INFO] [pool-1-thread-5] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 250
+2025-02-09 09:21:24,100 [INFO] [pool-1-thread-7] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 300
+2025-02-09 09:21:24,100 [INFO] [pool-1-thread-9] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 350
+2025-02-09 09:21:24,104 [INFO] [pool-1-thread-2] c.r.c.b.c.AccountConcurrentImpl - Withdrawn 200: New Balance: 150
+2025-02-09 09:21:24,104 [ERROR] [pool-1-thread-4] c.r.c.b.c.AccountConcurrentImpl - Withdrawal failed: Insufficient funds. Requested: 200, Available: 150
+2025-02-09 09:21:24,104 [ERROR] [pool-1-thread-6] c.r.c.b.c.AccountConcurrentImpl - Withdrawal failed: Insufficient funds. Requested: 200, Available: 150
+2025-02-09 09:21:24,105 [ERROR] [pool-1-thread-8] c.r.c.b.c.AccountConcurrentImpl - Withdrawal failed: Insufficient funds. Requested: 200, Available: 150
+2025-02-09 09:21:24,105 [ERROR] [pool-1-thread-10] c.r.c.b.c.AccountConcurrentImpl - Withdrawal failed: Insufficient funds. Requested: 200, Available: 150
+2025-02-09 09:27:32,669 [INFO] [pool-1-thread-1] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 150
+2025-02-09 09:27:32,680 [INFO] [pool-1-thread-3] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 200
+2025-02-09 09:27:32,681 [INFO] [pool-1-thread-5] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 250
+2025-02-09 09:27:32,682 [INFO] [pool-1-thread-7] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 300
+2025-02-09 09:27:32,682 [INFO] [pool-1-thread-9] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 350
+2025-02-09 09:27:32,684 [INFO] [pool-1-thread-10] c.r.c.b.c.AccountConcurrentImpl - Withdrawn 200: New Balance: 150
+2025-02-09 09:27:32,684 [ERROR] [pool-1-thread-6] c.r.c.b.c.AccountConcurrentImpl - Withdrawal failed: Insufficient funds. Requested: 200, Available: 150
+2025-02-09 09:27:32,684 [ERROR] [pool-1-thread-2] c.r.c.b.c.AccountConcurrentImpl - Withdrawal failed: Insufficient funds. Requested: 200, Available: 150
+2025-02-09 09:27:32,684 [ERROR] [pool-1-thread-8] c.r.c.b.c.AccountConcurrentImpl - Withdrawal failed: Insufficient funds. Requested: 200, Available: 150
+2025-02-09 09:27:32,685 [ERROR] [pool-1-thread-4] c.r.c.b.c.AccountConcurrentImpl - Withdrawal failed: Insufficient funds. Requested: 200, Available: 150
+2025-02-09 09:27:32,685 [INFO] [main] c.r.c.b.c.AccountConcurrentImpl - Account Balance Requested: 150
+2025-02-09 09:27:32,774 [ERROR] [main] c.r.c.b.c.AccountConcurrentImpl - Withdrawal failed: Insufficient funds. Requested: 200, Available: 100
+2025-02-09 09:27:32,781 [INFO] [pool-2-thread-1] c.r.c.b.c.AccountConcurrentImpl - Withdrawn 20: New Balance: 80
+2025-02-09 09:27:32,782 [INFO] [pool-2-thread-4] c.r.c.b.c.AccountConcurrentImpl - Withdrawn 20: New Balance: 60
+2025-02-09 09:27:32,782 [INFO] [pool-2-thread-3] c.r.c.b.c.AccountConcurrentImpl - Withdrawn 20: New Balance: 40
+2025-02-09 09:27:32,782 [INFO] [pool-2-thread-2] c.r.c.b.c.AccountConcurrentImpl - Withdrawn 20: New Balance: 20
+2025-02-09 09:27:32,782 [INFO] [pool-2-thread-5] c.r.c.b.c.AccountConcurrentImpl - Withdrawn 20: New Balance: 0
+2025-02-09 09:27:32,782 [INFO] [main] c.r.c.b.c.AccountConcurrentImpl - Account Balance Requested: 0
+2025-02-09 09:27:32,787 [INFO] [pool-3-thread-1] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 150
+2025-02-09 09:27:32,787 [INFO] [pool-3-thread-2] c.r.c.b.c.AccountConcurrentImpl - Withdrawn 30: New Balance: 120
+2025-02-09 09:27:32,787 [INFO] [pool-3-thread-3] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 170
+2025-02-09 09:27:32,788 [INFO] [pool-3-thread-4] c.r.c.b.c.AccountConcurrentImpl - Withdrawn 30: New Balance: 140
+2025-02-09 09:27:32,789 [INFO] [pool-3-thread-5] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 190
+2025-02-09 09:27:32,790 [INFO] [pool-3-thread-9] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 240
+2025-02-09 09:27:32,790 [INFO] [pool-3-thread-6] c.r.c.b.c.AccountConcurrentImpl - Withdrawn 30: New Balance: 210
+2025-02-09 09:27:32,790 [INFO] [pool-3-thread-7] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 260
+2025-02-09 09:27:32,791 [INFO] [pool-3-thread-8] c.r.c.b.c.AccountConcurrentImpl - Withdrawn 30: New Balance: 230
+2025-02-09 09:27:32,792 [INFO] [pool-3-thread-10] c.r.c.b.c.AccountConcurrentImpl - Withdrawn 30: New Balance: 200
+2025-02-09 09:27:32,792 [INFO] [main] c.r.c.b.c.AccountConcurrentImpl - Account Balance Requested: 200
+2025-02-09 09:27:32,801 [INFO] [main] c.r.c.b.c.AccountConcurrentImpl - Withdrawn 50: New Balance: 50
+2025-02-09 09:27:32,802 [INFO] [main] c.r.c.b.c.AccountConcurrentImpl - Account Balance Requested: 50
+2025-02-09 09:27:32,807 [INFO] [pool-4-thread-1] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 150
+2025-02-09 09:27:32,807 [INFO] [pool-4-thread-2] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 200
+2025-02-09 09:27:32,809 [INFO] [pool-4-thread-3] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 250
+2025-02-09 09:27:32,811 [INFO] [pool-4-thread-5] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 300
+2025-02-09 09:27:32,811 [INFO] [pool-4-thread-1] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 350
+2025-02-09 09:27:32,811 [INFO] [pool-4-thread-2] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 400
+2025-02-09 09:27:32,811 [INFO] [pool-4-thread-4] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 450
+2025-02-09 09:27:32,811 [INFO] [pool-4-thread-3] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 500
+2025-02-09 09:27:32,811 [INFO] [pool-4-thread-5] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 550
+2025-02-09 09:27:32,812 [INFO] [pool-4-thread-1] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 600
+2025-02-09 09:27:32,812 [INFO] [main] c.r.c.b.c.AccountConcurrentImpl - Account Balance Requested: 600
+2025-02-09 09:27:32,818 [INFO] [main] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 150
+2025-02-09 09:27:32,818 [INFO] [main] c.r.c.b.c.AccountConcurrentImpl - Account Balance Requested: 150
+2025-02-09 09:29:45,198 [INFO] [pool-1-thread-1] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 150
+2025-02-09 09:29:45,208 [INFO] [pool-1-thread-3] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 200
+2025-02-09 09:29:45,211 [INFO] [pool-1-thread-5] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 250
+2025-02-09 09:29:45,211 [INFO] [pool-1-thread-7] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 300
+2025-02-09 09:29:45,212 [INFO] [pool-1-thread-9] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 350
+2025-02-09 09:29:45,218 [INFO] [pool-1-thread-6] c.r.c.b.c.AccountConcurrentImpl - Withdrawn 200: New Balance: 150
+2025-02-09 09:29:45,218 [ERROR] [pool-1-thread-4] c.r.c.b.c.AccountConcurrentImpl - Withdrawal failed: Insufficient funds. Requested: 200, Available: 150
+2025-02-09 09:29:45,219 [ERROR] [pool-1-thread-2] c.r.c.b.c.AccountConcurrentImpl - Withdrawal failed: Insufficient funds. Requested: 200, Available: 150
+2025-02-09 09:29:45,219 [ERROR] [pool-1-thread-8] c.r.c.b.c.AccountConcurrentImpl - Withdrawal failed: Insufficient funds. Requested: 200, Available: 150
+2025-02-09 09:29:45,219 [ERROR] [pool-1-thread-10] c.r.c.b.c.AccountConcurrentImpl - Withdrawal failed: Insufficient funds. Requested: 200, Available: 150
+2025-02-09 09:29:45,220 [INFO] [main] c.r.c.b.c.AccountConcurrentImpl - Account Balance Requested: 150
+2025-02-09 09:29:45,272 [ERROR] [main] c.r.c.b.c.AccountConcurrentImpl - Withdrawal failed: Insufficient funds. Requested: 200, Available: 100
+2025-02-09 09:29:45,280 [INFO] [pool-2-thread-1] c.r.c.b.c.AccountConcurrentImpl - Withdrawn 20: New Balance: 80
+2025-02-09 09:29:45,281 [INFO] [pool-2-thread-2] c.r.c.b.c.AccountConcurrentImpl - Withdrawn 20: New Balance: 60
+2025-02-09 09:29:45,281 [INFO] [pool-2-thread-3] c.r.c.b.c.AccountConcurrentImpl - Withdrawn 20: New Balance: 40
+2025-02-09 09:29:45,281 [INFO] [pool-2-thread-4] c.r.c.b.c.AccountConcurrentImpl - Withdrawn 20: New Balance: 20
+2025-02-09 09:29:45,281 [INFO] [pool-2-thread-5] c.r.c.b.c.AccountConcurrentImpl - Withdrawn 20: New Balance: 0
+2025-02-09 09:29:45,281 [INFO] [main] c.r.c.b.c.AccountConcurrentImpl - Account Balance Requested: 0
+2025-02-09 09:29:45,285 [INFO] [pool-3-thread-1] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 150
+2025-02-09 09:29:45,286 [INFO] [pool-3-thread-2] c.r.c.b.c.AccountConcurrentImpl - Withdrawn 30: New Balance: 120
+2025-02-09 09:29:45,287 [INFO] [pool-3-thread-3] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 170
+2025-02-09 09:29:45,291 [INFO] [pool-3-thread-5] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 220
+2025-02-09 09:29:45,291 [INFO] [pool-3-thread-6] c.r.c.b.c.AccountConcurrentImpl - Withdrawn 30: New Balance: 190
+2025-02-09 09:29:45,291 [INFO] [pool-3-thread-7] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 240
+2025-02-09 09:29:45,291 [INFO] [pool-3-thread-8] c.r.c.b.c.AccountConcurrentImpl - Withdrawn 30: New Balance: 210
+2025-02-09 09:29:45,291 [INFO] [pool-3-thread-9] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 260
+2025-02-09 09:29:45,291 [INFO] [pool-3-thread-4] c.r.c.b.c.AccountConcurrentImpl - Withdrawn 30: New Balance: 230
+2025-02-09 09:29:45,291 [INFO] [pool-3-thread-10] c.r.c.b.c.AccountConcurrentImpl - Withdrawn 30: New Balance: 200
+2025-02-09 09:29:45,293 [INFO] [main] c.r.c.b.c.AccountConcurrentImpl - Account Balance Requested: 200
+2025-02-09 09:29:45,302 [INFO] [main] c.r.c.b.c.AccountConcurrentImpl - Withdrawn 50: New Balance: 50
+2025-02-09 09:29:45,302 [INFO] [main] c.r.c.b.c.AccountConcurrentImpl - Account Balance Requested: 50
+2025-02-09 09:29:45,312 [INFO] [pool-4-thread-1] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 150
+2025-02-09 09:29:45,313 [INFO] [pool-4-thread-2] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 200
+2025-02-09 09:29:45,314 [INFO] [pool-4-thread-3] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 250
+2025-02-09 09:29:45,315 [INFO] [pool-4-thread-4] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 300
+2025-02-09 09:29:45,315 [INFO] [pool-4-thread-4] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 350
+2025-02-09 09:29:45,315 [INFO] [pool-4-thread-4] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 400
+2025-02-09 09:29:45,315 [INFO] [pool-4-thread-5] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 450
+2025-02-09 09:29:45,315 [INFO] [pool-4-thread-1] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 500
+2025-02-09 09:29:45,315 [INFO] [pool-4-thread-2] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 550
+2025-02-09 09:29:45,315 [INFO] [pool-4-thread-3] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 600
+2025-02-09 09:29:45,316 [INFO] [main] c.r.c.b.c.AccountConcurrentImpl - Account Balance Requested: 600
+2025-02-09 09:29:45,320 [INFO] [main] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 150
+2025-02-09 09:29:45,320 [INFO] [main] c.r.c.b.c.AccountConcurrentImpl - Account Balance Requested: 150
