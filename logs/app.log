@@ -139,3 +139,53 @@
 2025-02-09 09:29:45,316 [INFO] [main] c.r.c.b.c.AccountConcurrentImpl - Account Balance Requested: 600
 2025-02-09 09:29:45,320 [INFO] [main] c.r.c.b.c.AccountConcurrentImpl - Deposited 50: New Balance: 150
 2025-02-09 09:29:45,320 [INFO] [main] c.r.c.b.c.AccountConcurrentImpl - Account Balance Requested: 150
+2025-02-09 12:24:17,676 [INFO] [main] c.r.c.b.c.AccountConcurrentImpl - Only one driver, no need to exchange gossips
+2025-02-09 12:24:17,701 [WARN] [main] c.r.c.b.c.AccountConcurrentImpl - No routes provided
+2025-02-09 12:25:49,251 [INFO] [main] c.r.c.b.c.AccountConcurrentImpl - Only one driver, no need to exchange gossips
+2025-02-09 12:25:49,273 [WARN] [main] c.r.c.b.c.AccountConcurrentImpl - No routes provided
+2025-02-09 12:25:49,281 [INFO] [main] c.r.c.b.c.AccountConcurrentImpl - All drivers know all gossips after 5 minutes
+2025-02-09 12:27:03,279 [INFO] [main] c.r.c.b.c.AccountConcurrentImpl - Only one driver, no need to exchange gossips
+2025-02-09 12:27:03,294 [WARN] [main] c.r.c.b.c.AccountConcurrentImpl - No routes provided
+2025-02-09 12:27:03,298 [INFO] [main] c.r.c.b.c.AccountConcurrentImpl - All drivers know all gossips after 5 minutes
+2025-02-09 12:27:03,309 [INFO] [main] c.r.c.b.c.AccountConcurrentImpl - Gossips not exchanged after 480 minutes
+2025-02-09 12:28:14,709 [INFO] [main] c.r.c.b.c.AccountConcurrentImpl - Only one driver, no need to exchange gossips
+2025-02-09 12:28:14,726 [WARN] [main] c.r.c.b.c.AccountConcurrentImpl - No routes provided
+2025-02-09 12:28:14,733 [INFO] [main] c.r.c.b.c.AccountConcurrentImpl - All drivers know all gossips after 5 minutes
+2025-02-09 12:28:14,742 [INFO] [main] c.r.c.b.c.AccountConcurrentImpl - Gossips not exchanged after 480 minutes
+2025-02-09 17:03:57,423 [INFO] [main] c.r.c.g.s.GossipSimulatorImpl - Only one driver. Gossips will never be exchanged
+2025-02-09 17:03:57,458 [WARN] [main] c.r.c.g.s.GossipSimulatorImpl - No routes provided
+2025-02-09 17:03:57,470 [INFO] [main] c.r.c.g.s.GossipSimulatorImpl - All drivers know all gossips after 5 minutes
+2025-02-09 17:03:57,482 [INFO] [main] c.r.c.g.s.GossipSimulatorImpl - Gossips not exchanged after 480 minutes
+2025-02-09 17:11:22,017 [INFO] [main] c.r.c.g.s.GossipSimulatorImpl - Only one route/driver, no gossip exchange needed.
+2025-02-09 17:11:22,039 [WARN] [main] c.r.c.g.s.GossipSimulatorImpl - No routes provided
+2025-02-09 17:11:22,048 [INFO] [main] c.r.c.g.s.GossipSimulatorImpl - All drivers know all gossips after 5 minutes
+2025-02-09 17:11:22,063 [INFO] [main] c.r.c.g.s.GossipSimulatorImpl - Gossips not exchanged after 480 minutes
+2025-02-09 17:13:37,802 [INFO] [main] c.r.c.g.s.GossipSimulatorImpl - Only one route/driver, no gossip exchange needed.
+2025-02-09 17:13:37,826 [WARN] [main] c.r.c.g.s.GossipSimulatorImpl - No routes provided
+2025-02-09 17:13:37,835 [INFO] [main] c.r.c.g.s.GossipSimulatorImpl - All drivers know all gossips after 5 minutes
+2025-02-09 17:13:37,847 [INFO] [main] c.r.c.g.s.GossipSimulatorImpl - Gossips not exchanged after 480 minutes
+2025-02-09 17:34:21,478 [INFO] [main] c.r.c.g.s.GossipSimulatorImpl - Only one route/driver, no gossip exchange needed.
+2025-02-09 17:34:21,524 [WARN] [main] c.r.c.g.s.GossipSimulatorImpl - No routes provided
+2025-02-09 17:34:21,533 [INFO] [main] c.r.c.g.s.GossipSimulatorImpl - All drivers know all gossips after 5 minutes
+2025-02-09 17:34:21,546 [INFO] [main] c.r.c.g.s.GossipSimulatorImpl - Gossips not exchanged after 480 minutes
+2025-02-09 17:38:15,214 [INFO] [main] c.r.c.g.s.GossipSimulatorImpl - Only one route/driver, no gossip exchange needed.
+2025-02-09 17:38:15,260 [WARN] [main] c.r.c.g.s.GossipSimulatorImpl - No routes provided
+2025-02-09 17:38:15,268 [INFO] [main] c.r.c.g.s.GossipSimulatorImpl - All drivers know all gossips after 5 minutes
+2025-02-09 17:38:15,287 [INFO] [main] c.r.c.g.s.GossipSimulatorImpl - Gossips not exchanged after 480 minutes
+2025-02-09 17:40:51,277 [WARN] [main] c.r.c.g.s.GossipSimulatorImpl - No routes provided
+2025-02-09 17:40:51,317 [INFO] [main] c.r.c.g.s.GossipSimulatorImpl - Only one route/driver, no gossip exchange needed.
+2025-02-09 17:40:51,324 [INFO] [main] c.r.c.g.s.GossipSimulatorImpl - All drivers know all gossips after 5 minutes
+2025-02-09 17:40:51,332 [INFO] [main] c.r.c.g.s.GossipSimulatorImpl - All drivers know all gossips after 1 minutes
+2025-02-09 17:40:51,353 [INFO] [main] c.r.c.g.s.GossipSimulatorImpl - Gossips not exchanged after 480 minutes
+2025-02-09 17:42:43,519 [INFO] [main] c.r.c.g.s.GossipSimulatorImpl - Gossips not exchanged after 480 minutes
+2025-02-09 17:42:43,557 [WARN] [main] c.r.c.g.s.GossipSimulatorImpl - No routes provided
+2025-02-09 17:42:43,561 [INFO] [main] c.r.c.g.s.GossipSimulatorImpl - Only one route/driver, no gossip exchange needed.
+2025-02-09 17:42:43,574 [INFO] [main] c.r.c.g.s.GossipSimulatorImpl - All drivers know all gossips after 5 minutes
+2025-02-09 17:42:43,579 [INFO] [main] c.r.c.g.s.GossipSimulatorImpl - All drivers know all gossips after 1 minutes
+2025-02-09 17:42:43,584 [INFO] [main] c.r.c.g.s.GossipSimulatorImpl - Gossips not exchanged after 480 minutes
+2025-02-09 17:43:40,256 [INFO] [main] c.r.c.g.s.GossipSimulatorImpl - Gossips not exchanged after 480 minutes
+2025-02-09 17:43:40,297 [WARN] [main] c.r.c.g.s.GossipSimulatorImpl - No routes provided
+2025-02-09 17:43:40,303 [INFO] [main] c.r.c.g.s.GossipSimulatorImpl - Only one route/driver, no gossip exchange needed.
+2025-02-09 17:43:40,311 [INFO] [main] c.r.c.g.s.GossipSimulatorImpl - All drivers know all gossips after 5 minutes
+2025-02-09 17:43:40,316 [INFO] [main] c.r.c.g.s.GossipSimulatorImpl - All drivers know all gossips after 1 minutes
+2025-02-09 17:43:40,324 [INFO] [main] c.r.c.g.s.GossipSimulatorImpl - Gossips not exchanged after 480 minutes
