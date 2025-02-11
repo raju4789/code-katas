@@ -137,3 +137,5 @@ an API that translates the commands sent from Earth into instructions that are u
     - Refactored movement logic into separate classes for each direction.
     - Implemented Factory pattern to create direction objects dynamically.
     - Implement MovementValidator for obstacle validation and dynamic obstacle support
+    - Use enums for directions while accepting string input for flexibility and type safety
+    - Improved exception handling and added custom exceptions for better error reporting

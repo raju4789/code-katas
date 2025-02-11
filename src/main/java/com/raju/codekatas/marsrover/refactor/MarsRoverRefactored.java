@@ -1,6 +1,8 @@
 package com.raju.codekatas.marsrover.refactor;
 
 import com.raju.codekatas.marsrover.refactor.direction.Direction;
+import com.raju.codekatas.marsrover.refactor.exception.InvalidCommandException;
+import com.raju.codekatas.marsrover.refactor.exception.ObstacleException;
 import com.raju.codekatas.marsrover.refactor.factory.DirectionFactory;
 import com.raju.codekatas.marsrover.refactor.model.Coordinate;
 import com.raju.codekatas.marsrover.refactor.validator.MovementValidator;
@@ -9,7 +11,6 @@ import org.slf4j.LoggerFactory;
 
 public class MarsRoverRefactored {
     private static final Logger logger = LoggerFactory.getLogger(MarsRoverRefactored.class);
-
 
     private final MovementValidator movementValidator;
     private final int stepLength; // The number of steps the rover moves in each command
@@ -44,38 +45,40 @@ public class MarsRoverRefactored {
 
         for (char command : commands.toCharArray()) {
             if (obstacleEncountered) {
-                logger.info("Obstacle encountered. Stopping further processing of commands");
+                logger.info("Obstacle encountered. Stopping further processing of commands.");
                 break;
             }
 
-            switch (command) {
-                case 'L':
-                    direction = direction.turnLeft();
-                    break;
-                case 'R':
-                    direction = direction.turnRight();
-                    break;
-                case 'F':
-                    try {
-                        position = direction.moveForward(position, stepLength, movementValidator);
-                    } catch (Exception e) {
-                        logger.error("Obstacle encountered at {}", position);
-                        obstacleEncountered = true;
-                    }
-                    break;
-                case 'B':
-                    try {
-                        position = direction.moveBackward(position, stepLength, movementValidator);
-                    } catch (Exception e) {
-                        logger.error("Obstacle encountered at {}", position);
-                        obstacleEncountered = true;
-                    }
-                    break;
-                default:
-                    logger.error("Invalid command");
-                    throw new IllegalArgumentException("Invalid command");
+            try {
+                processCommand(command);
+            } catch (ObstacleException e) {
+                logger.error("Obstacle encountered at {}. Stopping further processing of commands.", position);
+                obstacleEncountered = true;
+                break;
             }
         }
     }
 
+    private void processCommand(char command) throws InvalidCommandException, ObstacleException {
+        switch (command) {
+            case 'L':
+                direction = direction.turnLeft();
+                logger.debug("Turned left. New direction: {}", direction);
+                break;
+            case 'R':
+                direction = direction.turnRight();
+                logger.debug("Turned right. New direction: {}", direction);
+                break;
+            case 'F':
+                position = direction.moveForward(position, stepLength, movementValidator);
+                logger.debug("Moved forward. New position: {}", position);
+                break;
+            case 'B':
+                position = direction.moveBackward(position, stepLength, movementValidator);
+                logger.debug("Moved backward. New position: {}", position);
+                break;
+            default:
+                throw new InvalidCommandException("Invalid command: " + command);
+        }
+    }
 }

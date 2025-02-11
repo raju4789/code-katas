@@ -1,5 +1,6 @@
 package com.raju.codekatas.marsrover.refactor;
 
+import com.raju.codekatas.marsrover.refactor.exception.InvalidCommandException;
 import com.raju.codekatas.marsrover.refactor.model.Coordinate;
 import com.raju.codekatas.marsrover.refactor.utils.ObstacleDetector;
 import com.raju.codekatas.marsrover.refactor.validator.MovementValidator;
@@ -173,8 +174,8 @@ class MarsRoverRefactoredTest {
         MovementValidator movementValidator = new ObstacleMovementValidator(obstacleDetector);
         MarsRoverRefactored rover = new MarsRoverRefactored(movementValidator, startPosition, "N", 1);
 
-        Exception exception = assertThrows(IllegalArgumentException.class, () -> rover.move("X"));
-        assertEquals("Invalid command", exception.getMessage());
+        Exception exception = assertThrows(InvalidCommandException.class, () -> rover.move("X"));
+        assertEquals("Invalid command: X", exception.getMessage());
     }
 
     @Test
