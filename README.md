@@ -139,3 +139,4 @@ an API that translates the commands sent from Earth into instructions that are u
     - Implement MovementValidator for obstacle validation and dynamic obstacle support
     - Use enums for directions while accepting string input for flexibility and type safety
     - Improved exception handling and added custom exceptions for better error reporting
+    - Implement support for multiple movement strategies i.e; TorusMovementStrategy and PolarMovementStrategy
