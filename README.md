@@ -136,3 +136,4 @@ an API that translates the commands sent from Earth into instructions that are u
     - Extracted object detection logic to a separate class: `ObstacleDetector`.
     - Refactored movement logic into separate classes for each direction.
     - Implemented Factory pattern to create direction objects dynamically.
+    - Implement MovementValidator for obstacle validation and dynamic obstacle support

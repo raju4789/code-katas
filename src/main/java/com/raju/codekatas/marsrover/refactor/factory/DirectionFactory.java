@@ -1,20 +1,23 @@
 package com.raju.codekatas.marsrover.refactor.factory;
 
 import com.raju.codekatas.marsrover.refactor.direction.*;
+import com.raju.codekatas.marsrover.refactor.enums.DirectionEnum;
 
 public class DirectionFactory {
     public static Direction getDirection(String direction) {
-        switch (direction) {
-            case "N":
+        DirectionEnum directionEnum = DirectionEnum.fromString(direction);
+
+        switch (directionEnum) {
+            case NORTH:
                 return new North();
-            case "E":
+            case EAST:
                 return new East();
-            case "S":
+            case SOUTH:
                 return new South();
-            case "W":
+            case WEST:
                 return new West();
             default:
-                throw new IllegalArgumentException("Invalid direction");
+                throw new IllegalArgumentException("Invalid direction: " + direction);
         }
     }
 }
