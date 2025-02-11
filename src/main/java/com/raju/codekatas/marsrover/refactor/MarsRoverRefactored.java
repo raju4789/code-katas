@@ -1,8 +1,10 @@
 package com.raju.codekatas.marsrover.refactor;
 
+import com.raju.codekatas.marsrover.refactor.command.RoverCommand;
 import com.raju.codekatas.marsrover.refactor.direction.Direction;
 import com.raju.codekatas.marsrover.refactor.exception.InvalidCommandException;
 import com.raju.codekatas.marsrover.refactor.exception.ObstacleException;
+import com.raju.codekatas.marsrover.refactor.factory.CommandFactory;
 import com.raju.codekatas.marsrover.refactor.factory.DirectionFactory;
 import com.raju.codekatas.marsrover.refactor.model.Coordinate;
 import com.raju.codekatas.marsrover.refactor.strategy.MovementStrategy;
@@ -32,12 +34,32 @@ public class MarsRoverRefactored {
         return position;
     }
 
+    public void setPosition(Coordinate position) {
+        this.position = position;
+    }
+
     public Direction getDirection() {
         return direction;
     }
 
+    public void setDirection(Direction direction) {
+        this.direction = direction;
+    }
+
     public boolean isObstacleEncountered() {
         return obstacleEncountered;
+    }
+
+    public MovementStrategy getMovementStrategy() {
+        return movementStrategy;
+    }
+
+    public MovementValidator getMovementValidator() {
+        return movementValidator;
+    }
+
+    public int getStepLength() {
+        return stepLength;
     }
 
     public void move(String commands) {
@@ -46,14 +68,17 @@ public class MarsRoverRefactored {
             throw new InvalidCommandException("Commands cannot be null or empty");
         }
 
-        for (char command : commands.toCharArray()) {
+        CommandFactory commandFactory = new CommandFactory(this);
+
+        for (char commandChar : commands.toCharArray()) {
             if (obstacleEncountered) {
                 logger.warn("Obstacle encountered. Stopping further processing of commands.");
                 break;
             }
 
             try {
-                processCommand(command);
+                RoverCommand command = commandFactory.getCommand(commandChar);
+                command.execute();
             } catch (ObstacleException e) {
                 logger.error("Obstacle encountered at {}. Stopping further processing of commands.", position);
                 obstacleEncountered = true;
@@ -62,38 +87,4 @@ public class MarsRoverRefactored {
         }
     }
 
-    private void processCommand(char command) throws InvalidCommandException, ObstacleException {
-        switch (command) {
-            case 'L': {
-                direction = direction.turnLeft();
-                logger.debug("Turned left. New direction: {}", direction.getDirection());
-                break;
-            }
-            case 'R': {
-                direction = direction.turnRight();
-                logger.debug("Turned right. New direction: {}", direction.getDirection());
-                break;
-            }
-            case 'F': {
-                Coordinate newPosition = movementStrategy.moveForward(position, direction, stepLength);
-                if (!movementValidator.isMovementValid(newPosition)) {
-                    throw new ObstacleException("Obstacle detected at " + newPosition);
-                }
-                logger.debug("Moved forward. New position: {}", position);
-                position = newPosition;
-                break;
-            }
-            case 'B': {
-                Coordinate newPosition = movementStrategy.moveBackward(position, direction, stepLength);
-                if (!movementValidator.isMovementValid(newPosition)) {
-                    throw new ObstacleException("Obstacle detected at " + newPosition);
-                }
-                logger.debug("Moved backward. New position: {}", position);
-                position = newPosition;
-                break;
-            }
-            default:
-                throw new InvalidCommandException("Invalid command: " + command);
-        }
-    }
 }
