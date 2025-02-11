@@ -1,7 +1,6 @@
-package raju.codekatas.bank.core;
+package com.raju.codekatas.bank.core;
 
 import com.raju.codekatas.bank.Account;
-import com.raju.codekatas.bank.core.AccountImpl;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

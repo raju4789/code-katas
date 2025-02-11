@@ -1,4 +1,4 @@
-package raju.codekatas.gossip;
+package com.raju.codekatas.gossip;
 
 import com.raju.codekatas.gossip.simulator.GossipSimulator;
 import com.raju.codekatas.gossip.simulator.GossipSimulatorImpl;

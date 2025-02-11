@@ -1,4 +1,4 @@
-package raju;
+package com.raju;
 
 public class Main {
     public static void main(String[] args) {
