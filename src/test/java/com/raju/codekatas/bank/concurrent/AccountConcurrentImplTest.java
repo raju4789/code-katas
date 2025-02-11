@@ -1,6 +1,5 @@
-package raju.codekatas.bank.concurrent;
+package com.raju.codekatas.bank.concurrent;
 
-import com.raju.codekatas.bank.concurrent.AccountConcurrentImpl;
 import com.raju.codekatas.bank.exception.InsufficientBalanceException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

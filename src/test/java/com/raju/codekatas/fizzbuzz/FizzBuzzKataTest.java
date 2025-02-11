@@ -1,7 +1,6 @@
-package raju.codekatas.fizzbuzz;
+package com.raju.codekatas.fizzbuzz;
 
 
-import com.raju.codekatas.fizzbuzz.FizzBuzzKata;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
