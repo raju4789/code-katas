@@ -134,3 +134,5 @@ an API that translates the commands sent from Earth into instructions that are u
 4. Refactored the code to improve readability and maintainability.
     - Implemented Coordinate class to represent the position of the rover.
     - Extracted object detection logic to a separate class: `ObstacleDetector`.
+    - Refactored movement logic into separate classes for each direction.
+    - Implemented Factory pattern to create direction objects dynamically.

@@ -1,6 +1,5 @@
-package com.raju.codekatas.marsrover;
+package com.raju.codekatas.marsrover.basic;
 
-import com.raju.codekatas.marsrover.basic.MarsRover;
 import org.junit.jupiter.api.Test;
 
 import java.util.Set;
