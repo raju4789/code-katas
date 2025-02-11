@@ -1,19 +1,18 @@
 package com.raju.codekatas.marsrover.refactor.factory;
 
 import com.raju.codekatas.marsrover.refactor.direction.*;
-import com.raju.codekatas.marsrover.refactor.utils.ObstacleDetector;
 
 public class DirectionFactory {
-    public static Direction getDirection(String direction, ObstacleDetector obstacleDetector) {
+    public static Direction getDirection(String direction) {
         switch (direction) {
             case "N":
-                return new North(obstacleDetector);
+                return new North();
             case "E":
-                return new East(obstacleDetector);
+                return new East();
             case "S":
-                return new South(obstacleDetector);
+                return new South();
             case "W":
-                return new West(obstacleDetector);
+                return new West();
             default:
                 throw new IllegalArgumentException("Invalid direction");
         }

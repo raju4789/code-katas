@@ -3,7 +3,7 @@ package com.raju.codekatas.marsrover.refactor;
 import com.raju.codekatas.marsrover.refactor.direction.Direction;
 import com.raju.codekatas.marsrover.refactor.factory.DirectionFactory;
 import com.raju.codekatas.marsrover.refactor.model.Coordinate;
-import com.raju.codekatas.marsrover.refactor.utils.ObstacleDetector;
+import com.raju.codekatas.marsrover.refactor.validator.MovementValidator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,19 +11,18 @@ public class MarsRoverRefactored {
     private static final Logger logger = LoggerFactory.getLogger(MarsRoverRefactored.class);
 
 
-    private final ObstacleDetector obstacleDetector;
+    private final MovementValidator movementValidator;
     private final int stepLength; // The number of steps the rover moves in each command
     private Coordinate position; // The current position of the rover
     private Direction direction; // The current direction the rover is facing
     private boolean obstacleEncountered = false;
 
-    public MarsRoverRefactored(Coordinate initialPosition, String initialDirection, int stepLength, ObstacleDetector obstacleDetector) {
+    public MarsRoverRefactored(MovementValidator movementValidator, Coordinate initialPosition, String initialDirection, int stepLength) {
+        this.movementValidator = movementValidator;
         this.position = initialPosition;
-        this.obstacleDetector = obstacleDetector;
-        this.direction = DirectionFactory.getDirection(initialDirection, obstacleDetector);
+        this.direction = DirectionFactory.getDirection(initialDirection);
         this.stepLength = stepLength;
     }
-
 
     public Coordinate getPosition() {
         return position;
@@ -58,7 +57,7 @@ public class MarsRoverRefactored {
                     break;
                 case 'F':
                     try {
-                        position = direction.moveForward(position, stepLength);
+                        position = direction.moveForward(position, stepLength, movementValidator);
                     } catch (Exception e) {
                         logger.error("Obstacle encountered at {}", position);
                         obstacleEncountered = true;
@@ -66,7 +65,7 @@ public class MarsRoverRefactored {
                     break;
                 case 'B':
                     try {
-                        position = direction.moveBackward(position, stepLength);
+                        position = direction.moveBackward(position, stepLength, movementValidator);
                     } catch (Exception e) {
                         logger.error("Obstacle encountered at {}", position);
                         obstacleEncountered = true;

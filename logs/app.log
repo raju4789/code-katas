@@ -249,3 +249,9 @@
 2025-02-11 09:47:00,188 [ERROR] [main] c.r.c.m.r.MarsRoverRefactored - Commands cannot be null or empty
 2025-02-11 09:47:00,206 [ERROR] [main] c.r.c.m.r.MarsRoverRefactored - Obstacle encountered at (0, 0)
 2025-02-11 09:47:00,207 [INFO] [main] c.r.c.m.r.MarsRoverRefactored - Obstacle encountered. Stopping further processing of commands
+2025-02-11 12:20:18,137 [ERROR] [main] c.r.c.m.r.MarsRoverRefactored - Commands cannot be null or empty
+2025-02-11 12:20:18,196 [ERROR] [main] c.r.c.m.r.MarsRoverRefactored - Invalid command
+2025-02-11 12:20:18,213 [ERROR] [main] c.r.c.m.r.MarsRoverRefactored - Obstacle encountered at (0, 0)
+2025-02-11 12:20:18,235 [ERROR] [main] c.r.c.m.r.MarsRoverRefactored - Commands cannot be null or empty
+2025-02-11 12:20:18,254 [ERROR] [main] c.r.c.m.r.MarsRoverRefactored - Obstacle encountered at (0, 0)
+2025-02-11 12:20:18,255 [INFO] [main] c.r.c.m.r.MarsRoverRefactored - Obstacle encountered. Stopping further processing of commands

@@ -2,6 +2,8 @@ package com.raju.codekatas.marsrover.refactor;
 
 import com.raju.codekatas.marsrover.refactor.model.Coordinate;
 import com.raju.codekatas.marsrover.refactor.utils.ObstacleDetector;
+import com.raju.codekatas.marsrover.refactor.validator.MovementValidator;
+import com.raju.codekatas.marsrover.refactor.validator.ObstacleMovementValidator;
 import com.raju.codekatas.marsrover.utils.ApplicationConstants;
 import org.junit.jupiter.api.Test;
 
@@ -14,8 +16,10 @@ class MarsRoverRefactoredTest {
     @Test
     void testInitialization() {
         Coordinate startPosition = new Coordinate(0, 0);
+
         ObstacleDetector obstacleDetector = new ObstacleDetector(Set.of());
-        MarsRoverRefactored rover = new MarsRoverRefactored(startPosition, "N", 1, obstacleDetector);
+        ObstacleMovementValidator movementValidator = new ObstacleMovementValidator(obstacleDetector);
+        MarsRoverRefactored rover = new MarsRoverRefactored(movementValidator, startPosition, "N", 1);
 
         assertEquals(startPosition, rover.getPosition());
         assertEquals("N", rover.getDirection().toString());
@@ -25,8 +29,10 @@ class MarsRoverRefactoredTest {
     @Test
     void testTurnLeft() {
         Coordinate startPosition = new Coordinate(0, 0);
+
         ObstacleDetector obstacleDetector = new ObstacleDetector(Set.of());
-        MarsRoverRefactored rover = new MarsRoverRefactored(startPosition, "N", 1, obstacleDetector);
+        ObstacleMovementValidator movementValidator = new ObstacleMovementValidator(obstacleDetector);
+        MarsRoverRefactored rover = new MarsRoverRefactored(movementValidator, startPosition, "N", 1);
 
         rover.move("L");
         assertEquals("W", rover.getDirection().toString());
@@ -44,8 +50,10 @@ class MarsRoverRefactoredTest {
     @Test
     void testTurnRight() {
         Coordinate startPosition = new Coordinate(0, 0);
+
         ObstacleDetector obstacleDetector = new ObstacleDetector(Set.of());
-        MarsRoverRefactored rover = new MarsRoverRefactored(startPosition, "N", 1, obstacleDetector);
+        ObstacleMovementValidator movementValidator = new ObstacleMovementValidator(obstacleDetector);
+        MarsRoverRefactored rover = new MarsRoverRefactored(movementValidator, startPosition, "N", 1);
 
         rover.move("R");
         assertEquals("E", rover.getDirection().toString());
@@ -63,8 +71,10 @@ class MarsRoverRefactoredTest {
     @Test
     void testMoveForward() {
         Coordinate startPosition = new Coordinate(0, 0);
+
         ObstacleDetector obstacleDetector = new ObstacleDetector(Set.of());
-        MarsRoverRefactored rover = new MarsRoverRefactored(startPosition, "N", 1, obstacleDetector);
+        ObstacleMovementValidator movementValidator = new ObstacleMovementValidator(obstacleDetector);
+        MarsRoverRefactored rover = new MarsRoverRefactored(movementValidator, startPosition, "N", 1);
 
         rover.move("F");
         assertEquals(new Coordinate(0, 1), rover.getPosition());
@@ -85,8 +95,10 @@ class MarsRoverRefactoredTest {
     @Test
     void testMoveBackward() {
         Coordinate startPosition = new Coordinate(0, 0);
+
         ObstacleDetector obstacleDetector = new ObstacleDetector(Set.of());
-        MarsRoverRefactored rover = new MarsRoverRefactored(startPosition, "N", 1, obstacleDetector);
+        ObstacleMovementValidator movementValidator = new ObstacleMovementValidator(obstacleDetector);
+        MarsRoverRefactored rover = new MarsRoverRefactored(movementValidator, startPosition, "N", 1);
 
         rover.move("B");
         assertEquals("N", rover.getDirection().toString());
@@ -111,9 +123,12 @@ class MarsRoverRefactoredTest {
     @Test
     void testObstacleEncountered() {
         Coordinate startPosition = new Coordinate(0, 0);
+
         Set<Coordinate> obstacles = Set.of(new Coordinate(0, 1));
         ObstacleDetector obstacleDetector = new ObstacleDetector(obstacles);
-        MarsRoverRefactored rover = new MarsRoverRefactored(startPosition, "N", 1, obstacleDetector);
+        MovementValidator movementValidator = new ObstacleMovementValidator(new ObstacleDetector(obstacles));
+
+        MarsRoverRefactored rover = new MarsRoverRefactored(movementValidator, startPosition, "N", 1);
 
         rover.move("F");
         assertEquals(new Coordinate(0, 0), rover.getPosition()); // Should not move
@@ -123,8 +138,10 @@ class MarsRoverRefactoredTest {
     @Test
     void testMultipleCommands() {
         Coordinate startPosition = new Coordinate(0, 0);
+
         ObstacleDetector obstacleDetector = new ObstacleDetector(Set.of());
-        MarsRoverRefactored rover = new MarsRoverRefactored(startPosition, "N", 1, obstacleDetector);
+        MovementValidator movementValidator = new ObstacleMovementValidator(obstacleDetector);
+        MarsRoverRefactored rover = new MarsRoverRefactored(movementValidator, startPosition, "N", 1);
 
         rover.move("FFRFF");
         assertEquals(new Coordinate(2, 2), rover.getPosition());
@@ -135,9 +152,12 @@ class MarsRoverRefactoredTest {
     @Test
     void testObstacleStopsFurtherCommands() {
         Coordinate startPosition = new Coordinate(0, 0);
+
         Set<Coordinate> obstacles = Set.of(new Coordinate(0, 1));
         ObstacleDetector obstacleDetector = new ObstacleDetector(obstacles);
-        MarsRoverRefactored rover = new MarsRoverRefactored(startPosition, "N", 1, obstacleDetector);
+        MovementValidator movementValidator = new ObstacleMovementValidator(obstacleDetector);
+
+        MarsRoverRefactored rover = new MarsRoverRefactored(movementValidator, startPosition, "N", 1);
 
         rover.move("FFRFF");
         assertEquals(new Coordinate(0, 0), rover.getPosition()); // Should stop at the obstacle
@@ -148,8 +168,10 @@ class MarsRoverRefactoredTest {
     @Test
     void testInvalidCommand() {
         Coordinate startPosition = new Coordinate(0, 0);
+
         ObstacleDetector obstacleDetector = new ObstacleDetector(Set.of());
-        MarsRoverRefactored rover = new MarsRoverRefactored(startPosition, "N", 1, obstacleDetector);
+        MovementValidator movementValidator = new ObstacleMovementValidator(obstacleDetector);
+        MarsRoverRefactored rover = new MarsRoverRefactored(movementValidator, startPosition, "N", 1);
 
         Exception exception = assertThrows(IllegalArgumentException.class, () -> rover.move("X"));
         assertEquals("Invalid command", exception.getMessage());
@@ -158,8 +180,10 @@ class MarsRoverRefactoredTest {
     @Test
     void testNullCommands() {
         Coordinate startPosition = new Coordinate(0, 0);
+
         ObstacleDetector obstacleDetector = new ObstacleDetector(Set.of());
-        MarsRoverRefactored rover = new MarsRoverRefactored(startPosition, "N", 1, obstacleDetector);
+        MovementValidator movementValidator = new ObstacleMovementValidator(obstacleDetector);
+        MarsRoverRefactored rover = new MarsRoverRefactored(movementValidator, startPosition, "N", 1);
 
         Exception exception = assertThrows(IllegalArgumentException.class, () -> rover.move(null));
         assertEquals("Commands cannot be null or empty", exception.getMessage());
@@ -169,7 +193,8 @@ class MarsRoverRefactoredTest {
     void testEmptyCommands() {
         Coordinate startPosition = new Coordinate(0, 0);
         ObstacleDetector obstacleDetector = new ObstacleDetector(Set.of());
-        MarsRoverRefactored rover = new MarsRoverRefactored(startPosition, "N", 1, obstacleDetector);
+        MovementValidator movementValidator = new ObstacleMovementValidator(obstacleDetector);
+        MarsRoverRefactored rover = new MarsRoverRefactored(movementValidator, startPosition, "N", 1);
 
         Exception exception = assertThrows(IllegalArgumentException.class, () -> rover.move(""));
         assertEquals("Commands cannot be null or empty", exception.getMessage());

@@ -2,16 +2,10 @@ package com.raju.codekatas.marsrover.refactor.direction;
 
 import com.raju.codekatas.marsrover.refactor.exception.ObstacleException;
 import com.raju.codekatas.marsrover.refactor.model.Coordinate;
-import com.raju.codekatas.marsrover.refactor.utils.ObstacleDetector;
+import com.raju.codekatas.marsrover.refactor.validator.MovementValidator;
 import com.raju.codekatas.marsrover.utils.ApplicationConstants;
 
 public class West implements Direction {
-
-    private final ObstacleDetector obstacleDetector;
-
-    public West(ObstacleDetector obstacleDetector) {
-        this.obstacleDetector = obstacleDetector;
-    }
 
     public String toString() {
         return "W";
@@ -19,29 +13,30 @@ public class West implements Direction {
 
     @Override
     public Direction turnLeft() {
-        return new South(obstacleDetector);
+        return new South();
     }
 
     @Override
     public Direction turnRight() {
-        return new North(obstacleDetector);
+        return new North();
     }
 
     @Override
-    public Coordinate moveForward(Coordinate currentPosition, int stepLength) {
-        return calculateNewPosition(currentPosition, -stepLength);
+    public Coordinate moveForward(Coordinate currentPosition, int stepLength, MovementValidator movementValidator) throws ObstacleException {
+        return calculateNewPosition(currentPosition, -stepLength, movementValidator);
     }
 
     @Override
-    public Coordinate moveBackward(Coordinate currentPosition, int stepSize) {
-        return calculateNewPosition(currentPosition, stepSize);
+    public Coordinate moveBackward(Coordinate currentPosition, int stepSize, MovementValidator movementValidator) throws ObstacleException {
+        return calculateNewPosition(currentPosition, stepSize, movementValidator);
     }
 
-    private Coordinate calculateNewPosition(Coordinate currentPosition, int stepSize) throws ObstacleException {
+    private Coordinate calculateNewPosition(Coordinate currentPosition, int stepSize, MovementValidator movementValidator) throws ObstacleException {
         int newX = (currentPosition.getX() + stepSize + ApplicationConstants.MAX_X) % ApplicationConstants.MAX_X;
+
         Coordinate newCoordinate = new Coordinate(newX, currentPosition.getY());
-        if (obstacleDetector.isObstacle(newCoordinate)) {
-            newCoordinate = currentPosition;
+
+        if (!movementValidator.isMovementValid(newCoordinate)) {
             throw new ObstacleException("Obstacle detected at " + newCoordinate);
         }
         return newCoordinate;
