@@ -18,4 +18,5 @@ buildNumber.properties
 
 .idea/
 
-logs/
+logs
+
