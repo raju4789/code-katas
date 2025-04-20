@@ -1708,3 +1708,239 @@ java.lang.RuntimeException: Unexpected error
 	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
 2025-03-02 10:48:13,787 [INFO] [main] c.r.c.o.s.DefaultOrderService - Placing order for customer: John Doe
 2025-03-02 10:48:13,794 [INFO] [main] c.r.c.o.s.DefaultOrderService - Placing order for customer: John Doe
+2025-04-20 16:03:55,139 [INFO] [main] c.r.c.c.w.NioConfigFileWatcher - ConfigFileWatcher stopped.
+2025-04-20 16:03:55,175 [INFO] [main] c.r.c.c.w.NioConfigFileWatcher - ConfigFileWatcher stopped.
+2025-04-20 16:03:55,175 [INFO] [main] c.r.c.c.w.NioConfigFileWatcher - ConfigFileWatcher stopped.
+2025-04-20 16:03:56,209 [INFO] [main] c.r.c.c.w.NioConfigFileWatcher - ConfigFileWatcher stopped.
+2025-04-20 16:03:56,225 [INFO] [main] c.r.c.c.w.NioConfigFileWatcher - ConfigFileWatcher stopped.
+2025-04-20 16:03:57,253 [INFO] [ConfigFileWatcher] c.r.c.c.w.NioConfigFileWatcher - Detected change in test15817786843558265388.tmp
+2025-04-20 16:04:01,461 [INFO] [main] c.r.c.c.w.NioConfigFileWatcher - ConfigFileWatcher stopped.
+2025-04-20 16:04:01,461 [INFO] [ConfigFileWatcher] c.r.c.c.w.NioConfigFileWatcher - File watcher thread interrupted, shutting down.
+2025-04-20 16:04:02,474 [INFO] [main] c.r.c.c.w.NioConfigFileWatcher - ConfigFileWatcher stopped.
+2025-04-20 16:04:02,480 [INFO] [ConfigFileWatcher] c.r.c.c.w.NioConfigFileWatcher - File watcher thread interrupted, shutting down.
+2025-04-20 16:04:07,497 [INFO] [main] c.r.c.c.w.NioConfigFileWatcher - ConfigFileWatcher stopped.
+2025-04-20 16:04:07,497 [INFO] [ConfigFileWatcher] c.r.c.c.w.NioConfigFileWatcher - File watcher thread interrupted, shutting down.
+2025-04-20 16:04:08,012 [INFO] [main] c.r.c.c.w.NioConfigFileWatcher - ConfigFileWatcher stopped.
+2025-04-20 16:04:08,012 [INFO] [ConfigFileWatcher] c.r.c.c.w.NioConfigFileWatcher - File watcher thread interrupted, shutting down.
+2025-04-20 16:04:08,017 [INFO] [ConfigFileWatcher] c.r.c.c.w.NioConfigFileWatcher - File watcher thread interrupted, shutting down.
+2025-04-20 16:04:08,222 [INFO] [main] c.r.c.c.w.NioConfigFileWatcher - ConfigFileWatcher stopped.
+2025-04-20 16:04:08,227 [INFO] [main] c.r.c.c.w.NioConfigFileWatcher - ConfigFileWatcher stopped.
+2025-04-20 16:04:08,435 [INFO] [main] c.r.c.c.w.NioConfigFileWatcher - ConfigFileWatcher stopped.
+2025-04-20 16:04:08,443 [INFO] [main] c.r.c.c.w.NioConfigFileWatcher - ConfigFileWatcher stopped.
+2025-04-20 16:12:38,224 [INFO] [main] c.r.c.c.w.NioConfigFileWatcher - ConfigFileWatcher stopped.
+2025-04-20 16:12:38,250 [INFO] [main] c.r.c.c.w.NioConfigFileWatcher - ConfigFileWatcher stopped.
+2025-04-20 16:12:39,291 [INFO] [main] c.r.c.c.w.NioConfigFileWatcher - ConfigFileWatcher stopped.
+2025-04-20 16:12:39,292 [INFO] [ConfigFileWatcher] c.r.c.c.w.NioConfigFileWatcher - File watcher thread interrupted, shutting down.
+2025-04-20 16:12:39,308 [INFO] [main] c.r.c.c.w.NioConfigFileWatcher - ConfigFileWatcher stopped.
+2025-04-20 16:12:40,334 [INFO] [ConfigFileWatcher] c.r.c.c.w.NioConfigFileWatcher - Detected change in test7343043449862184202.tmp
+2025-04-20 16:12:44,543 [INFO] [main] c.r.c.c.w.NioConfigFileWatcher - ConfigFileWatcher stopped.
+2025-04-20 16:12:44,543 [INFO] [ConfigFileWatcher] c.r.c.c.w.NioConfigFileWatcher - File watcher thread interrupted, shutting down.
+2025-04-20 16:12:45,566 [INFO] [main] c.r.c.c.w.NioConfigFileWatcher - ConfigFileWatcher stopped.
+2025-04-20 16:12:45,568 [INFO] [ConfigFileWatcher] c.r.c.c.w.NioConfigFileWatcher - File watcher thread interrupted, shutting down.
+2025-04-20 16:12:50,583 [INFO] [main] c.r.c.c.w.NioConfigFileWatcher - ConfigFileWatcher stopped.
+2025-04-20 16:12:50,586 [INFO] [ConfigFileWatcher] c.r.c.c.w.NioConfigFileWatcher - File watcher thread interrupted, shutting down.
+2025-04-20 16:12:51,099 [INFO] [main] c.r.c.c.w.NioConfigFileWatcher - ConfigFileWatcher stopped.
+2025-04-20 16:12:51,100 [INFO] [ConfigFileWatcher] c.r.c.c.w.NioConfigFileWatcher - File watcher thread interrupted, shutting down.
+2025-04-20 16:12:51,107 [INFO] [ConfigFileWatcher] c.r.c.c.w.NioConfigFileWatcher - File watcher thread interrupted, shutting down.
+2025-04-20 16:12:51,312 [INFO] [main] c.r.c.c.w.NioConfigFileWatcher - ConfigFileWatcher stopped.
+2025-04-20 16:12:51,323 [INFO] [main] c.r.c.c.w.NioConfigFileWatcher - ConfigFileWatcher stopped.
+2025-04-20 16:12:51,530 [INFO] [main] c.r.c.c.w.NioConfigFileWatcher - ConfigFileWatcher stopped.
+2025-04-20 16:12:51,539 [INFO] [main] c.r.c.c.w.NioConfigFileWatcher - ConfigFileWatcher stopped.
+2025-04-20 16:15:16,002 [INFO] [main] c.r.c.c.w.NioConfigFileWatcher - ConfigFileWatcher stopped.
+2025-04-20 16:15:16,002 [INFO] [ConfigFileWatcher] c.r.c.c.w.NioConfigFileWatcher - File watcher thread interrupted, shutting down.
+2025-04-20 16:18:20,835 [INFO] [main] c.r.c.c.c.DynamicConfig - Loaded config from /var/folders/5l/ywmf3vbs38j82pmmsggnfnyh0000gq/T/test12093540427022566532.conf
+2025-04-20 16:18:20,867 [INFO] [main] c.r.c.c.c.DynamicConfig - DynamicConfig closed.
+2025-04-20 16:18:20,881 [INFO] [main] c.r.c.c.c.DynamicConfig - Loaded config from /var/folders/5l/ywmf3vbs38j82pmmsggnfnyh0000gq/T/test17293205539406263628.conf
+2025-04-20 16:18:20,882 [INFO] [main] c.r.c.c.c.DynamicConfig - Config file changed, reloading...
+2025-04-20 16:18:20,883 [ERROR] [main] c.r.c.c.c.DynamicConfig - Failed to load config, using last known good config
+com.typesafe.config.ConfigException$Parse: /var/folders/5l/ywmf3vbs38j82pmmsggnfnyh0000gq/T/test17293205539406263628.conf: 1: Key 'not valid config' may not be followed by token: end of file
+	at com.typesafe.config.impl.ConfigDocumentParser$ParseContext.parseError(ConfigDocumentParser.java:201)
+	at com.typesafe.config.impl.ConfigDocumentParser$ParseContext.parseError(ConfigDocumentParser.java:197)
+	at com.typesafe.config.impl.ConfigDocumentParser$ParseContext.parseObject(ConfigDocumentParser.java:461)
+	at com.typesafe.config.impl.ConfigDocumentParser$ParseContext.parse(ConfigDocumentParser.java:648)
+	at com.typesafe.config.impl.ConfigDocumentParser.parse(ConfigDocumentParser.java:14)
+	at com.typesafe.config.impl.Parseable.rawParseValue(Parseable.java:262)
+	at com.typesafe.config.impl.Parseable.rawParseValue(Parseable.java:250)
+	at com.typesafe.config.impl.Parseable.parseValue(Parseable.java:180)
+	at com.typesafe.config.impl.Parseable.parseValue(Parseable.java:174)
+	at com.typesafe.config.impl.Parseable.parse(Parseable.java:301)
+	at com.typesafe.config.ConfigFactory.parseFile(ConfigFactory.java:793)
+	at com.typesafe.config.ConfigFactory.parseFile(ConfigFactory.java:807)
+	at com.raju.codekatas.configsync.config.DynamicConfig.loadConfigOrDefault(DynamicConfig.java:58)
+	at com.raju.codekatas.configsync.config.DynamicConfig.reloadConfig(DynamicConfig.java:51)
+	at com.raju.codekatas.configsync.config.DynamicConfig.getConfig(DynamicConfig.java:45)
+	at com.raju.codekatas.configsync.config.DynamicConfigTest.testFallbackToLastGoodConfigOnError(DynamicConfigTest.java:113)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:688)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:210)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:206)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:131)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:65)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+2025-04-20 16:18:20,887 [INFO] [main] c.r.c.c.c.DynamicConfig - DynamicConfig closed.
+2025-04-20 16:18:20,919 [INFO] [main] c.r.c.c.c.DynamicConfig - Loaded config from /var/folders/5l/ywmf3vbs38j82pmmsggnfnyh0000gq/T/test918612774984751056.conf
+2025-04-20 16:18:20,921 [INFO] [main] c.r.c.c.c.DynamicConfig - Config file changed, reloading...
+2025-04-20 16:18:20,921 [INFO] [main] c.r.c.c.c.DynamicConfig - Loaded config from /var/folders/5l/ywmf3vbs38j82pmmsggnfnyh0000gq/T/test918612774984751056.conf
+2025-04-20 16:18:20,922 [INFO] [main] c.r.c.c.c.DynamicConfig - DynamicConfig closed.
+2025-04-20 16:18:20,929 [INFO] [main] c.r.c.c.c.DynamicConfig - Loaded config from /var/folders/5l/ywmf3vbs38j82pmmsggnfnyh0000gq/T/test7054735078484975616.conf
+2025-04-20 16:18:20,930 [INFO] [main] c.r.c.c.c.DynamicConfig - DynamicConfig closed.
+2025-04-20 16:18:20,931 [INFO] [main] c.r.c.c.c.DynamicConfig - DynamicConfig closed.
+2025-04-20 18:06:19,234 [ERROR] [main] c.r.c.c.ConfigLoaderExample - Error closing DynamicConfig
+java.lang.IllegalArgumentException: Config file does not exist: /Users/rmethuku/Raju/pocs/code-katas/./test.conf
+	at com.raju.codekatas.configsync.config.DynamicConfig.fromPath(DynamicConfig.java:36)
+	at com.raju.codekatas.configsync.ConfigLoaderExample.main(ConfigLoaderExample.java:20)
+2025-04-20 18:06:58,249 [INFO] [main] c.r.c.c.c.DynamicConfig - Loaded config from /Users/rmethuku/Raju/pocs/code-katas/src/main/resources/test.conf
+2025-04-20 18:06:58,259 [INFO] [main] c.r.c.c.ConfigLoaderExample - Loaded config: AppConfig{name='TestApp', version='1.0.0', enabled=true, maxConnections=10}
+2025-04-20 18:06:58,285 [INFO] [main] c.r.c.c.w.NioConfigFileWatcher - ConfigFileWatcher stopped.
+2025-04-20 18:06:58,285 [INFO] [main] c.r.c.c.c.DynamicConfig - DynamicConfig closed.
+2025-04-20 18:06:58,286 [INFO] [ConfigFileWatcher] c.r.c.c.w.NioConfigFileWatcher - File watcher thread interrupted, shutting down.
+2025-04-20 18:08:41,501 [INFO] [main] c.r.c.c.c.DynamicConfig - Loaded config from /Users/rmethuku/Raju/pocs/code-katas/src/main/resources/test.conf
+2025-04-20 18:08:41,514 [INFO] [main] c.r.c.c.ConfigLoaderExample - Loaded config: AppConfig{name='TestApp12', version='1.0.0', enabled=true, maxConnections=10}
+2025-04-20 18:17:59,585 [INFO] [main] c.r.c.c.c.DynamicConfig - Loaded config from /Users/rmethuku/Raju/pocs/code-katas/src/main/resources/test.conf
+2025-04-20 18:18:12,610 [INFO] [ConfigFileWatcher] c.r.c.c.w.NioConfigFileWatcher - Detected change in test.conf
+2025-04-20 18:18:14,611 [INFO] [main] c.r.c.c.c.DynamicConfig - Config file changed, reloading...
+2025-04-20 18:18:14,620 [INFO] [main] c.r.c.c.c.DynamicConfig - Loaded config from /Users/rmethuku/Raju/pocs/code-katas/src/main/resources/test.conf
+2025-04-20 18:20:43,878 [INFO] [main] c.r.c.c.c.DynamicConfig - Loaded config from /Users/rmethuku/Raju/pocs/code-katas/src/main/resources/test.conf
+2025-04-20 18:21:12,227 [INFO] [main] c.r.c.c.c.DynamicConfig - Loaded config from /Users/rmethuku/Raju/pocs/code-katas/src/main/resources/test.conf
+2025-04-20 18:24:49,879 [INFO] [main] c.r.c.c.c.DynamicConfig - Loaded config from /Users/rmethuku/Raju/pocs/code-katas/src/main/resources/test.conf
+2025-04-20 18:26:08,899 [INFO] [ConfigFileWatcher] c.r.c.c.w.NioConfigFileWatcher - Detected change in test.conf
+2025-04-20 18:26:17,405 [INFO] [main] c.r.c.c.c.DynamicConfig - Config file changed, reloading...
+2025-04-20 18:26:17,408 [INFO] [main] c.r.c.c.c.DynamicConfig - Loaded config from /Users/rmethuku/Raju/pocs/code-katas/src/main/resources/test.conf
+2025-04-20 18:26:34,903 [INFO] [ConfigFileWatcher] c.r.c.c.w.NioConfigFileWatcher - Detected change in test.conf
+2025-04-20 18:26:43,404 [INFO] [main] c.r.c.c.c.DynamicConfig - Config file changed, reloading...
+2025-04-20 18:26:43,407 [INFO] [main] c.r.c.c.c.DynamicConfig - Loaded config from /Users/rmethuku/Raju/pocs/code-katas/src/main/resources/test.conf
+2025-04-20 18:30:35,902 [INFO] [main] c.r.c.c.c.DynamicConfig - Loaded config from /Users/rmethuku/Raju/pocs/code-katas/src/main/resources/test.json
+2025-04-20 18:30:56,929 [INFO] [ConfigFileWatcher] c.r.c.c.w.NioConfigFileWatcher - Detected change in test.json
+2025-04-20 18:31:22,786 [INFO] [main] c.r.c.c.c.DynamicConfig - Config file changed, reloading...
+2025-04-20 18:31:22,793 [INFO] [main] c.r.c.c.c.DynamicConfig - Loaded config from /Users/rmethuku/Raju/pocs/code-katas/src/main/resources/test.json
+2025-04-20 19:06:41,022 [INFO] [main] c.r.c.c.w.NioConfigFileWatcher - ConfigFileWatcher stopped.
+2025-04-20 19:06:41,026 [INFO] [main] c.r.c.c.c.DynamicConfig - DynamicConfig closed.
+2025-04-20 19:06:41,035 [INFO] [ConfigFileWatcher] c.r.c.c.w.NioConfigFileWatcher - File watcher thread interrupted, shutting down.
+2025-04-20 19:06:48,484 [INFO] [main] c.r.c.c.c.DynamicConfig - Loaded config from /Users/rmethuku/Raju/pocs/code-katas/src/main/resources/test.json
+2025-04-20 19:06:48,494 [INFO] [main] c.r.c.c.ConfigLoaderExample - App is running. Edit test.conf and type 'show' to see updated values.
+2025-04-20 19:06:48,520 [INFO] [main] c.r.c.c.ConfigLoaderExample - Type 'show' to display config, or 'exit' to quit: 
+2025-04-20 19:08:31,380 [INFO] [main] c.r.c.c.ConfigLoaderExample - Current config: name=%s, version=%s, enabled=%s, maxConnections=%d%n
+2025-04-20 19:08:31,382 [INFO] [main] c.r.c.c.ConfigLoaderExample - Type 'show' to display config, or 'exit' to quit: 
+2025-04-20 19:08:47,509 [INFO] [ConfigFileWatcher] c.r.c.c.w.NioConfigFileWatcher - Detected change in test.json
+2025-04-20 19:08:53,721 [INFO] [main] c.r.c.c.ConfigLoaderExample - Type 'show' to display config, or 'exit' to quit: 
+2025-04-20 19:08:58,121 [INFO] [main] c.r.c.c.c.DynamicConfig - Config file changed, reloading...
+2025-04-20 19:08:58,124 [INFO] [main] c.r.c.c.c.DynamicConfig - Loaded config from /Users/rmethuku/Raju/pocs/code-katas/src/main/resources/test.json
+2025-04-20 19:08:58,125 [INFO] [main] c.r.c.c.ConfigLoaderExample - Current config: name=%s, version=%s, enabled=%s, maxConnections=%d%n
+2025-04-20 19:08:58,125 [INFO] [main] c.r.c.c.ConfigLoaderExample - Type 'show' to display config, or 'exit' to quit: 
+2025-04-20 19:11:10,042 [INFO] [main] c.r.c.c.c.DynamicConfig - Loaded config from /Users/rmethuku/Raju/pocs/code-katas/src/main/resources/test.conf
+2025-04-20 19:11:10,051 [INFO] [main] c.r.c.c.ConfigLoaderExample - App is running. Edit test.conf and type 'show' to see updated values.
+2025-04-20 19:11:10,081 [INFO] [main] c.r.c.c.ConfigLoaderExample - Type 'show' to display config, or 'exit' to quit: 
+2025-04-20 19:11:15,175 [INFO] [main] c.r.c.c.ConfigLoaderExample - Current config: name=%s, version=%s, enabled=%s, maxConnections=%d%n
+2025-04-20 19:11:15,175 [INFO] [main] c.r.c.c.ConfigLoaderExample - Type 'show' to display config, or 'exit' to quit: 
+2025-04-20 19:12:05,915 [INFO] [main] c.r.c.c.c.DynamicConfig - Loaded config from /Users/rmethuku/Raju/pocs/code-katas/src/main/resources/test.conf
+2025-04-20 19:12:05,924 [INFO] [main] c.r.c.c.ConfigLoaderExample - App is running. Edit test.conf and type 'show' to see updated values.
+2025-04-20 19:12:05,947 [INFO] [main] c.r.c.c.ConfigLoaderExample - Type 'show' to display config, or 'exit' to quit: 
+2025-04-20 19:12:09,972 [INFO] [main] c.r.c.c.ConfigLoaderExample - Current Config:
+2025-04-20 19:12:09,973 [INFO] [main] c.r.c.c.ConfigLoaderExample - Name: TestApp123
+2025-04-20 19:12:09,973 [INFO] [main] c.r.c.c.ConfigLoaderExample - Version: 1.0.0
+2025-04-20 19:12:09,973 [INFO] [main] c.r.c.c.ConfigLoaderExample - Enabled: true
+2025-04-20 19:12:09,973 [INFO] [main] c.r.c.c.ConfigLoaderExample - Max Connections: 10
+2025-04-20 19:12:09,973 [INFO] [main] c.r.c.c.ConfigLoaderExample - Type 'show' to display config, or 'exit' to quit: 
+2025-04-20 19:12:51,567 [INFO] [main] c.r.c.c.ConfigLoaderExample - Type 'show' to display config, or 'exit' to quit: 
+2025-04-20 19:12:51,569 [INFO] [main] c.r.c.c.ConfigLoaderExample - Current Config:
+2025-04-20 19:12:51,569 [INFO] [main] c.r.c.c.ConfigLoaderExample - Name: TestApp123
+2025-04-20 19:12:51,569 [INFO] [main] c.r.c.c.ConfigLoaderExample - Version: 1.0.0
+2025-04-20 19:12:51,569 [INFO] [main] c.r.c.c.ConfigLoaderExample - Enabled: true
+2025-04-20 19:12:51,570 [INFO] [main] c.r.c.c.ConfigLoaderExample - Max Connections: 10
+2025-04-20 19:12:51,570 [INFO] [main] c.r.c.c.ConfigLoaderExample - Type 'show' to display config, or 'exit' to quit: 
+2025-04-20 19:13:06,939 [INFO] [ConfigFileWatcher] c.r.c.c.w.NioConfigFileWatcher - Detected change in test.conf
+2025-04-20 19:13:15,619 [INFO] [main] c.r.c.c.ConfigLoaderExample - Type 'show' to display config, or 'exit' to quit: 
+2025-04-20 19:13:19,023 [INFO] [main] c.r.c.c.c.DynamicConfig - Config file changed, reloading...
+2025-04-20 19:13:19,029 [INFO] [main] c.r.c.c.c.DynamicConfig - Loaded config from /Users/rmethuku/Raju/pocs/code-katas/src/main/resources/test.conf
+2025-04-20 19:13:19,030 [INFO] [main] c.r.c.c.ConfigLoaderExample - Current Config:
+2025-04-20 19:13:19,030 [INFO] [main] c.r.c.c.ConfigLoaderExample - Name: TestApp12
+2025-04-20 19:13:19,030 [INFO] [main] c.r.c.c.ConfigLoaderExample - Version: 1.0.0
+2025-04-20 19:13:19,030 [INFO] [main] c.r.c.c.ConfigLoaderExample - Enabled: true
+2025-04-20 19:13:19,030 [INFO] [main] c.r.c.c.ConfigLoaderExample - Max Connections: 10
+2025-04-20 19:13:19,030 [INFO] [main] c.r.c.c.ConfigLoaderExample - Type 'show' to display config, or 'exit' to quit: 
+2025-04-20 19:14:00,970 [INFO] [main] c.r.c.c.ConfigLoaderExample - Type 'show' to display config, or 'exit' to quit: 
+2025-04-20 19:14:07,623 [INFO] [main] c.r.c.c.w.NioConfigFileWatcher - ConfigFileWatcher stopped.
+2025-04-20 19:14:07,625 [INFO] [main] c.r.c.c.c.DynamicConfig - DynamicConfig closed.
+2025-04-20 19:14:07,627 [INFO] [ConfigFileWatcher] c.r.c.c.w.NioConfigFileWatcher - File watcher thread interrupted, shutting down.
+2025-04-20 19:14:25,770 [INFO] [main] c.r.c.c.c.DynamicConfig - Loaded config from /Users/rmethuku/Raju/pocs/code-katas/src/main/resources/test.conf
+2025-04-20 19:14:25,779 [INFO] [main] c.r.c.c.ConfigLoaderExample - App is running. Edit test.conf and type 'show' to see updated values.
+2025-04-20 19:14:25,802 [INFO] [main] c.r.c.c.ConfigLoaderExample - Type 'show' to display config, or 'exit' to quit: 
+2025-04-20 19:14:39,895 [INFO] [main] c.r.c.c.ConfigLoaderExample - Current Config:
+2025-04-20 19:14:39,896 [INFO] [main] c.r.c.c.ConfigLoaderExample - Name: TestApp12
+2025-04-20 19:14:39,897 [INFO] [main] c.r.c.c.ConfigLoaderExample - Version: 1.0.0
+2025-04-20 19:14:39,897 [INFO] [main] c.r.c.c.ConfigLoaderExample - Enabled: true
+2025-04-20 19:14:39,897 [INFO] [main] c.r.c.c.ConfigLoaderExample - Max Connections: 10
+2025-04-20 19:14:39,897 [INFO] [main] c.r.c.c.ConfigLoaderExample - Type 'show' to display config, or 'exit' to quit: 
+2025-04-20 19:14:48,795 [INFO] [ConfigFileWatcher] c.r.c.c.w.NioConfigFileWatcher - Detected change in test.conf
+2025-04-20 19:14:52,380 [INFO] [main] c.r.c.c.ConfigLoaderExample - Type 'show' to display config, or 'exit' to quit: 
+2025-04-20 19:15:02,103 [INFO] [main] c.r.c.c.c.DynamicConfig - Config file changed, reloading...
+2025-04-20 19:15:02,111 [INFO] [main] c.r.c.c.c.DynamicConfig - Loaded config from /Users/rmethuku/Raju/pocs/code-katas/src/main/resources/test.conf
+2025-04-20 19:15:02,112 [INFO] [main] c.r.c.c.ConfigLoaderExample - Current Config:
+2025-04-20 19:15:02,113 [INFO] [main] c.r.c.c.ConfigLoaderExample - Name: TestApp123
+2025-04-20 19:15:02,113 [INFO] [main] c.r.c.c.ConfigLoaderExample - Version: 1.0.0
+2025-04-20 19:15:02,113 [INFO] [main] c.r.c.c.ConfigLoaderExample - Enabled: true
+2025-04-20 19:15:02,114 [INFO] [main] c.r.c.c.ConfigLoaderExample - Max Connections: 10
+2025-04-20 19:15:02,114 [INFO] [main] c.r.c.c.ConfigLoaderExample - Type 'show' to display config, or 'exit' to quit: 
+2025-04-20 19:15:09,877 [INFO] [main] c.r.c.c.w.NioConfigFileWatcher - ConfigFileWatcher stopped.
+2025-04-20 19:15:09,879 [INFO] [main] c.r.c.c.c.DynamicConfig - DynamicConfig closed.
+2025-04-20 19:15:09,881 [INFO] [ConfigFileWatcher] c.r.c.c.w.NioConfigFileWatcher - File watcher thread interrupted, shutting down.
