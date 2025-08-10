@@ -11,6 +11,7 @@ public class PhoneNumber implements CustomerContact {
     @Override
     public void validate() throws IllegalArgumentException {
         if (phoneNumber == null || !phoneNumber.matches("\\d{10}")) {
+
             throw new IllegalArgumentException("Invalid phone number");
         }
     }
