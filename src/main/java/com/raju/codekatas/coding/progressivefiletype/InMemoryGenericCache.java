@@ -12,102 +12,82 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 /**
  * 🚀 Problem Statement: Generic In-Memory Cache (Revolut-style)
  * <p>
- * Build a thread-safe, in-memory generic cache in Java. Your solution should be production-grade,
- * testable, and extensible, with clear stages of increasing complexity.
+ * This class implements a thread-safe, generic in-memory cache with support for:
+ * - Capacity limit with LRU eviction policy
+ * - Thread safety using ReadWriteLock
+ * - Optional TTL (time-to-live) for each cache entry, with scheduled cleanup of expired entries
  * <p>
- * ✳️ Functional Requirements:
- * <p>
- * Stage 1: Basic Functionality
- * - Implement put(K key, V value), get(K key): V, and remove(K key)
- * - Internally store the entries using an efficient data structure
- * <p>
- * Stage 2: Capacity Limit
- * - Support max cache size (passed via constructor)
- * - When capacity is exceeded, evict the oldest (FIFO or LRU in later stages)
- * <p>
- * Stage 3: Thread Safety
- * - Ensure safe access under concurrent reads and writes
- * - Avoid race conditions and data corruption
- * <p>
- * Stage 4: LRU Eviction (Stretch)
- * - Evict least recently used entry upon overflow
- * - Accessing an item should update its usage order
- * <p>
- * Stage 5: TTL Support (Bonus)
- * - Support Time-To-Live (expiry per key)
- * - Expired keys should be removed automatically or ignored on access
- * <p>
- * ✳️ Constraints:
- * - Use only core Java (no frameworks or caching libraries)
- * - Follow SOLID principles and clean code practices
- * - Use generics: class Cache<K, V>
- * <p>
- * ✳️ Example Usage:
- * <p>
- * Cache<String, String> cache = new InMemoryCache<>(2);
- * cache.put("a", "alpha");
- * cache.put("b", "beta");
- * cache.get("a");               // returns "alpha"
- * cache.put("c", "gamma");      // if LRU, evicts "b"
- * cache.get("b");               // returns null
- * <p>
- * ✳️ Threading Example:
- * // Multiple threads should be able to read/write safely
- * <p>
- * Thread t1 = new Thread(() -> cache.put("x", "1"));
- * Thread t2 = new Thread(() -> cache.get("x"));
- * t1.start(); t2.start();
- * <p>
- * 🔍 Discussion Points:
- * - Difference between coarse vs fine-grained locks
- * - Use of LinkedHashMap for LRU
- * - Trade-offs of TTL and cleanup strategies
+ * Uses a doubly linked list + HashMap to maintain LRU order efficiently.
  */
-
 public class InMemoryGenericCache<K, V> {
 
+    // Map to hold key to value + metadata (including TTL info)
     private final Map<K, ValueInfo<V>> valueStore;
+
+    // Map to hold key to linked list node (for LRU order maintenance)
     private final Map<K, Node<K, V>> nodeStore;
+
+    // Maximum capacity of cache
     private final int capacity;
+
+    // Dummy head and tail nodes of doubly linked list (for easy insert/remove)
     private final Node<K, V> head;
     private final Node<K, V> tail;
 
+    // ReadWriteLock for fine-grained thread safety:
+    // Multiple readers allowed, writers exclusive
     private final ReentrantReadWriteLock rwLock;
 
+    // Scheduled executor to clean expired cache entries periodically
     private final ScheduledExecutorService cleaner;
 
-
+    /**
+     * Constructor initializes the cache with a fixed capacity.
+     * Sets up dummy head and tail nodes for the linked list.
+     * Starts a scheduled cleanup task to run every 5 seconds.
+     */
     public InMemoryGenericCache(int capacity) {
         this.valueStore = new HashMap<>(capacity);
         this.nodeStore = new HashMap<>();
         this.capacity = capacity;
+
+        // Initialize dummy head and tail nodes for doubly linked list
         this.head = new Node<>(null, null);
         this.tail = new Node<>(null, null);
 
+        // Link head <-> tail
         this.head.setNext(this.tail);
         this.tail.setPrev(this.head);
 
+        // Initialize read-write lock
         this.rwLock = new ReentrantReadWriteLock();
 
+        // Start scheduled task to clean expired entries every 5 seconds
         this.cleaner = Executors.newSingleThreadScheduledExecutor();
         this.cleaner.scheduleAtFixedRate(this::cleanExpiredEntries, 5, 5, TimeUnit.SECONDS);
     }
 
+    /**
+     * Periodic cleanup method to remove expired entries.
+     * Acquires write lock as it modifies the cache.
+     */
     private void cleanExpiredEntries() {
         long now = System.currentTimeMillis();
 
         rwLock.writeLock().lock();
-
         try {
+            // Iterate over entries to find expired values
             Iterator<Map.Entry<K, ValueInfo<V>>> it = valueStore.entrySet().iterator();
             while (it.hasNext()) {
                 Map.Entry<K, ValueInfo<V>> entry = it.next();
                 ValueInfo<V> valueInfo = entry.getValue();
+
+                // Remove entry if TTL expired
                 if (valueInfo.expiresAt != null && valueInfo.expiresAt <= now) {
                     K key = entry.getKey();
-                    it.remove();
-                    Node<K, V> node = nodeStore.remove(key);
-                    removeNode(node);
+                    it.remove();                      // remove from valueStore
+                    Node<K, V> node = nodeStore.remove(key); // remove from nodeStore
+                    removeNode(node);                 // remove from linked list
                 }
             }
         } finally {
@@ -115,14 +95,19 @@ public class InMemoryGenericCache<K, V> {
         }
     }
 
+    /**
+     * Put or update an entry in the cache without TTL.
+     * Moves entry to front (most recently used).
+     * Evicts least recently used entry if capacity exceeded.
+     */
     public void put(K key, V value) {
-
         rwLock.writeLock().lock();
-
         try {
             ValueInfo<V> valueInfo;
             Node<K, V> valueNode;
+
             if (valueStore.containsKey(key)) {
+                // Key already present, update value and move node to front
                 valueInfo = valueStore.get(key);
                 valueInfo.setValue(value);
                 valueStore.put(key, valueInfo);
@@ -130,14 +115,18 @@ public class InMemoryGenericCache<K, V> {
                 valueNode = nodeStore.get(key);
 
                 moveToFront(valueNode);
-            } else {
 
+            } else {
+                // New key, check capacity and evict if needed
                 if (size() == this.capacity) {
+                    // Remove least recently used entry from end
                     K lruKey = tail.getPrev().getKey();
                     valueStore.remove(lruKey);
                     nodeStore.remove(lruKey);
                     removeNode(tail.getPrev());
                 }
+
+                // Insert new value and node at front
                 valueInfo = new ValueInfo<>(value);
                 valueStore.put(key, valueInfo);
 
@@ -150,16 +139,18 @@ public class InMemoryGenericCache<K, V> {
         } finally {
             rwLock.writeLock().unlock();
         }
-
-
     }
 
+    /**
+     * Put or update an entry in the cache with TTL.
+     * Similar to put() but sets expiry time.
+     */
     public void put(K key, V value, Long ttl) {
         rwLock.writeLock().lock();
-
         try {
             ValueInfo<V> valueInfo;
             Node<K, V> valueNode;
+
             if (valueStore.containsKey(key)) {
                 valueInfo = valueStore.get(key);
                 valueInfo.setValue(value);
@@ -169,8 +160,8 @@ public class InMemoryGenericCache<K, V> {
                 valueNode = nodeStore.get(key);
 
                 moveToFront(valueNode);
-            } else {
 
+            } else {
                 if (size() == this.capacity) {
                     K lruKey = tail.getPrev().getKey();
                     valueStore.remove(lruKey);
@@ -186,46 +177,49 @@ public class InMemoryGenericCache<K, V> {
 
                 addToFront(valueNode);
             }
-
         } finally {
             rwLock.writeLock().unlock();
         }
-
-
     }
 
+    /**
+     * Get the value for the key if present and not expired.
+     * Moves the node to front to mark it as recently used.
+     * Returns null if key not present or expired.
+     */
     public V get(K key) {
-
         rwLock.readLock().lock();
-
         try {
-
             if (!valueStore.containsKey(key)) {
                 return null;
             }
 
             ValueInfo<V> valueInfo = valueStore.get(key);
 
+            // Check expiry: if no expiry or not expired, return value
             if (valueInfo.expiresAt == null || valueInfo.expiresAt > System.currentTimeMillis()) {
-
                 Node<K, V> valueNode = nodeStore.get(key);
+
+                // Move accessed node to front (LRU update)
                 moveToFront(valueNode);
 
                 return valueInfo.getValue();
             }
 
+            // Entry expired: return null (consider removing in cleanup thread)
             return null;
+
         } finally {
             rwLock.readLock().unlock();
         }
-
-
     }
 
+    /**
+     * Remove an entry from cache.
+     * Removes from maps and linked list.
+     */
     public void remove(K key) {
-
         rwLock.writeLock().lock();
-
         try {
             if (!valueStore.containsKey(key)) {
                 return;
@@ -238,24 +232,27 @@ public class InMemoryGenericCache<K, V> {
         } finally {
             rwLock.writeLock().unlock();
         }
-
     }
 
+    /**
+     * Returns current number of entries in cache.
+     * Uses read lock as size is a read operation.
+     */
     public int size() {
         rwLock.readLock().lock();
-
         try {
             return valueStore.size();
         } finally {
             rwLock.readLock().unlock();
         }
-
     }
 
+    /**
+     * Clears the cache completely.
+     * Removes all entries and resets linked list pointers.
+     */
     public void clear() {
-
         rwLock.writeLock().lock();
-
         try {
             valueStore.clear();
             nodeStore.clear();
@@ -265,21 +262,29 @@ public class InMemoryGenericCache<K, V> {
         } finally {
             rwLock.writeLock().unlock();
         }
-
     }
 
+    /**
+     * Shutdown the cleaner thread gracefully.
+     */
     public void shutdown() {
         cleaner.shutdownNow();
     }
 
+    /**
+     * Helper method: move a node to the front of the linked list
+     * to mark it as most recently used.
+     */
     private void moveToFront(Node<K, V> node) {
-
         if (node == null) return;
 
         removeNode(node);
         addToFront(node);
     }
 
+    /**
+     * Helper method: add a node right after head (front of list).
+     */
     private void addToFront(Node<K, V> node) {
         if (node == null) return;
 
@@ -289,6 +294,9 @@ public class InMemoryGenericCache<K, V> {
         head.setNext(node);
     }
 
+    /**
+     * Helper method: remove a node from the linked list.
+     */
     private void removeNode(Node<K, V> node) {
         if (node == null || node.getPrev() == null || node.getNext() == null) return;
 
@@ -296,6 +304,10 @@ public class InMemoryGenericCache<K, V> {
         node.getNext().setPrev(node.getPrev());
     }
 
+    /**
+     * Node class representing an entry in the doubly linked list.
+     * Stores key, value, and links to prev and next nodes.
+     */
     private static class Node<K, V> {
         private K key;
         private V value;
@@ -342,6 +354,10 @@ public class InMemoryGenericCache<K, V> {
         }
     }
 
+    /**
+     * ValueInfo class wraps the value with optional TTL metadata.
+     * Stores expiry time if TTL is specified.
+     */
     private static class ValueInfo<V> {
         private V value;
         private Long ttl;
@@ -359,7 +375,6 @@ public class InMemoryGenericCache<K, V> {
             this.expiresAt = System.currentTimeMillis() + ttl;
         }
 
-
         public V getValue() {
             return value;
         }
@@ -372,16 +387,21 @@ public class InMemoryGenericCache<K, V> {
             this.ttl = ttl;
             this.expiresAt = System.currentTimeMillis() + ttl;
         }
-
     }
 }
 
+/**
+ * A simpler alternative implementation of LRU Cache
+ * using Java's LinkedHashMap with access-order enabled.
+ * Also thread-safe using ReadWriteLock.
+ */
 class InMemoryGenericCacheLinkedHashMap<K, V> {
     private final Map<K, V> store;
     private final ReentrantReadWriteLock rwLock = new ReentrantReadWriteLock();
 
     public InMemoryGenericCacheLinkedHashMap(int capacity) {
         this.store = new LinkedHashMap<>(capacity, 0.75f, true) {
+            // This method triggers removal of eldest entry when size exceeds capacity
             @Override
             protected boolean removeEldestEntry(Map.Entry<K, V> eldest) {
                 return size() > capacity;
@@ -389,6 +409,10 @@ class InMemoryGenericCacheLinkedHashMap<K, V> {
         };
     }
 
+    /**
+     * Insert or update entry in cache.
+     * Write lock is used for thread safety.
+     */
     public void put(K key, V value) {
         rwLock.writeLock().lock();
         try {
@@ -398,6 +422,10 @@ class InMemoryGenericCacheLinkedHashMap<K, V> {
         }
     }
 
+    /**
+     * Get entry from cache.
+     * Read lock used for thread safety.
+     */
     public V get(K key) {
         rwLock.readLock().lock();
         try {
@@ -407,6 +435,10 @@ class InMemoryGenericCacheLinkedHashMap<K, V> {
         }
     }
 
+    /**
+     * Remove entry from cache.
+     * Write lock used for thread safety.
+     */
     public void remove(K key) {
         rwLock.writeLock().lock();
         try {
@@ -416,6 +448,10 @@ class InMemoryGenericCacheLinkedHashMap<K, V> {
         }
     }
 
+    /**
+     * Return current cache size.
+     * Read lock used for thread safety.
+     */
     public int size() {
         rwLock.readLock().lock();
         try {
@@ -425,6 +461,10 @@ class InMemoryGenericCacheLinkedHashMap<K, V> {
         }
     }
 
+    /**
+     * Clear all entries in cache.
+     * Write lock used for thread safety.
+     */
     public void clear() {
         rwLock.writeLock().lock();
         try {
@@ -434,4 +474,3 @@ class InMemoryGenericCacheLinkedHashMap<K, V> {
         }
     }
 }
-
